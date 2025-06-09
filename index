@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureDrive EV - Drive the Future</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">FutureDrive EV</div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#stats" class="nav-link">Performance</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#configurator" class="nav-link">Configure</a>
+                <a href="#preorder" class="nav-link">Reserve</a>
+            </div>
+            <button class="reserve-btn" onclick="scrollToSection('preorder')">Reserve Now</button>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress HUD -->
+    <div id="scroll-hud" class="scroll-hud">
+        <div class="hud-container">
+            <div class="progress-circle">
+                <svg class="progress-svg" viewBox="0 0 100 100">
+                    <circle class="progress-bg" cx="50" cy="50" r="45"></circle>
+                    <circle class="progress-bar" cx="50" cy="50" r="45"></circle>
+                </svg>
+                <div class="progress-icon">🚗</div>
+            </div>
+            <div class="section-indicators">
+                <div class="indicator active" data-section="hero">
+                    <div class="indicator-dot"></div>
+                    <span>Exterior</span>
+                </div>
+                <div class="indicator" data-section="stats">
+                    <div class="indicator-dot"></div>
+                    <span>Performance</span>
+                </div>
+                <div class="indicator" data-section="features">
+                    <div class="indicator-dot"></div>
+                    <span>Tech</span>
+                </div>
+                <div class="indicator" data-section="configurator">
+                    <div class="indicator-dot"></div>
+                    <span>Configure</span>
+                </div>
+                <div class="indicator" data-section="preorder">
+                    <div class="indicator-dot"></div>
+                    <span>Reserve</span>
+                </div>
+            </div>
+            <div class="progress-percentage">0%</div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">DRIVE</h1>
+            <h2 class="hero-subtitle">THE FUTURE</h2>
+            <p class="hero-description">Experience the next generation of electric vehicles. Zero emissions, infinite possibilities.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('preorder')">Reserve Now</button>
+                <button class="btn-secondary" onclick="scrollToSection('stats')">Explore Specs</button>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-dot dot-1"></div>
+            <div class="floating-dot dot-2"></div>
+            <div class="floating-dot dot-3"></div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats">
+        <div class="container">
+            <h2 class="section-title">Unmatched Performance</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number" data-target="320">0</div>
+                    <div class="stat-label">km/h Top Speed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔋</div>
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% Battery Efficiency</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number" data-target="650">0</div>
+                    <div class="stat-label">km Range</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-number" data-target="2.8">0</div>
+                    <div class="stat-label">s 0-100 km/h</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Revolutionary Design</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334" alt="Interior">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Intelligent Interior</h3>
+                        <p>Immersive cockpit with AI-powered displays, premium materials, and intuitive controls that adapt to your preferences.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5" alt="Design">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Aerodynamic Excellence</h3>
+                        <p>Sculpted with precision for optimal airflow, featuring adaptive aerodynamics and a coefficient of drag of just 0.20.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e" alt="Technology">
+                    </div>
+                    <div class="feature-content">
+                        <h3>AI-Powered Tech</h3>
+                        <p>Level 4 autonomous driving, neural network processing, and over-the-air updates that evolve your vehicle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Configurator Section -->
+    <section id="configurator" class="configurator">
+        <div class="container">
+            <h2 class="section-title">Configure Your FutureDrive</h2>
+            <div class="configurator-grid">
+                <div class="car-display">
+                    <div class="car-container" id="carContainer">
+                        <img id="carImage" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5" alt="FutureDrive EV">
+                    </div>
+                    <div class="car-info">
+                        <h3>FutureDrive EV <span id="selectedModel">Pro</span></h3>
+                        <p id="selectedColor">Midnight Black</p>
+                        <p id="selectedWheel">18" Standard Wheels</p>
+                    </div>
+                </div>
+                <div class="customizer-panel">
+                    <div class="color-selector">
+                        <h4>Choose Color</h4>
+                        <div class="color-grid">
+<button class="color-btn active" data-color="Midnight Black" data-bg="#1a1a1a" data-img="Midnight Black.jpeg"></button>
+<button class="color-btn" data-color="Pearl White" data-bg="#f8f9fa" data-img="Pearl White.jpeg"></button>
+<button class="color-btn" data-color="Electric Blue" data-bg="#2563eb" data-img="Electric Blue.jpeg"></button>
+<button class="color-btn" data-color="Crimson Red" data-bg="#dc2626" data-img="Crimson Red.jpg"></button>
+
+
+
+                        </div>
+                    </div>
+                    <div class="wheel-selector">
+                        <h4>Choose Wheels</h4>
+                        <div class="wheel-options">
+                            <button class="wheel-btn active" data-wheel="standard" data-price="0">
+                                <span>18" Standard</span>
+                                <span>Included</span>
+                            </button>
+                            <button class="wheel-btn" data-wheel="sport" data-price="2500">
+                                <span>20" Sport Alloy</span>
+                                <span>+$2,500</span>
+                            </button>
+                            <button class="wheel-btn" data-wheel="performance" data-price="4500">
+                                <span>22" Performance</span>
+                                <span>+$4,500</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="price-estimator">
+                        <h4>Price Estimator</h4>
+                        <div class="model-selector">
+                            <label>Model</label>
+                            <select id="modelSelect">
+                                <option value="Base" data-price="45000">Base - $45,000</option>
+                                <option value="Pro" data-price="55000" selected>Pro - $55,000</option>
+                                <option value="Sport" data-price="65000">Sport - $65,000</option>
+                            </select>
+                        </div>
+                        <div class="payment-slider">
+                            <label>Down Payment: $<span id="downPaymentValue">10000</span></label>
+                            <input type="range" id="downPayment" min="5000" max="50000" step="1000" value="10000">
+                        </div>
+                        <div class="price-breakdown">
+                            <div class="price-line">
+                                <span>Base Price:</span>
+                                <span id="basePrice">$55,000</span>
+                            </div>
+                            <div class="price-line" id="wheelPriceLine" style="display: none;">
+                                <span>Wheels:</span>
+                                <span id="wheelPrice">+$0</span>
+                            </div>
+                            <div class="price-line">
+                                <span>Tax (8%):</span>
+                                <span id="taxAmount">$4,400</span>
+                            </div>
+                            <div class="price-total">
+                                <span>Total Price:</span>
+                                <span id="totalPrice">$59,400</span>
+                            </div>
+                        </div>
+                        <div class="monthly-payment">
+                            <div class="payment-display">
+                                <div>Estimated Monthly Payment</div>
+                                <div class="payment-amount" id="monthlyPayment">$1,142/mo</div>
+                                <div class="payment-note">*3.5% APR for 60 months</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Order Form -->
+    <section id="preorder" class="preorder">
+        <div class="container">
+            <h2 class="section-title">Reserve Your FutureDrive</h2>
+            <p class="section-subtitle">Be among the first to experience the future of electric driving.</p>
+            <div class="form-container" id="formContainer">
+                <form id="preorderForm" class="preorder-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Preferred Model</label>
+                            <select id="model" name="model">
+                                <option value="Base">Base ($45,000)</option>
+                                <option value="Pro" selected>Pro ($55,000)</option>
+                                <option value="Sport">Sport ($65,000)</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="color">Preferred Color</label>
+                            <select id="color" name="color">
+                                <option value="Midnight Black" selected>Midnight Black</option>
+                                <option value="Pearl White">Pearl White</option>
+                                <option value="Electric Blue">Electric Blue</option>
+                                <option value="Crimson Red">Crimson Red</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Complete Reservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">FutureDrive EV</div>
+            <p>Driving the future, today. © 2025 FutureDrive Technologies.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
